@@ -1,4 +1,159 @@
-﻿@charset "utf-8";
+﻿@import url(http://fonts.googleapis.com/css?family=Raleway:400,300);
+
+//Color definitions
+$lightblue: #D7F7FE;
+$darkblue: #1A577F;
+$darkblue1: #0f213e;
+$medblue: #1F729C;
+$salmon: #FF6067;
+$hellayellow: #F7EE1A;
+$bluelight: #4D94FF;
+$bluelight2: #fafcfe;
+$turquoiseBrighter :#01969c;
+$blueFoursquare : #25a0ca;
+$blueBabe :#96b5d4 ;
+$blueVimeo:	#86c9ef;  
+//Typography
+$base-font-size: 16px;
+$base-font-family: 'Nunito', sans-serif;
+$heading-font-family: 'Righteous', sans-serif;
+
+//Convert px to em
+@function em($px, $base: $base-font-size) {
+  @return ($px / $base) * 1em;
+}
+
+.btn{
+  position:relative;
+  display:inline-block;
+  padding:5px;
+  border-radius:4px;
+  width:32px;
+  height:32px;
+  text-indent:-250px;
+  overflow:hidden;
+  transition: background-color 1s; 
+}
+
+.btn:hover{
+}
+
+.tw{background:url(http://heyvian.com/misc/32/Twitter.png) no-repeat top left;
+}
+
+.fb{background:url(http://heyvian.com/misc/32/Facebook.png) no-repeat top left;
+}
+
+.gp{background:url(http://heyvian.com/misc/32/Google%20+.png) no-repeat top left;
+}
+
+.pin{background:url(http://heyvian.com/misc/32/Pinterest.png) no-repeat top left;
+}
+
+.credit{
+  width:100%;
+  font-size:32px;
+  font-weight:700;
+  text-transform:uppercase;
+  text-align:center;
+  vertical-align:bottom;
+  line-height:12px;
+  margin:40px 0 0 0;
+  color:#666;
+}
+
+.credit a{
+  font-size:12px;
+  font-weight:400;
+  color:#888;
+  padding:0 4px;
+}
+
+.credit a:hover{
+  border-bottom:2px solid #ddd;
+}
+
+h1{
+  color:#666;
+  font-weight:300;
+}
+
+a{
+  text-decoration:none;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+li{
+  list-style:none;
+  display:inline;
+}
+body {
+  background: $lightblue;
+  font-family: $base-font-family;
+  color: #222;
+}
+
+* {
+  transition: all .65s ease;
+  box-sizing: border-box;
+  
+}
+
+//Centering Content 
+.container {
+  max-width: 75em;
+  margin: 0 auto;
+}
+
+//Setting up the header so the "logo" and tagline site on each side of the header using flexbox. At 700px, they will stack.
+.header {
+  background: $hellayellow;
+  color: white;
+  padding: em(10px);
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .site-title, .site-tagline {
+    font-weight: 400;
+  }
+  @media (max-width: 700px) {
+    .site-title, .site-tagline {
+      width: 100%;
+      text-align: center;
+    }
+    .site-title {
+      margin: 0;
+    }
+  }
+}
+.site-title, h1, h2, h3 {
+  font-family: $heading-font-family;
+  font-size: em(50px);
+  color: darken($lightblue, 75%);
+}
+h3 {
+  font-size: em(32px);
+  color: desaturate($hellayellow, 10%);
+}
+.site-title {
+  color: white;
+}
+.site-tagline {
+  font-size: em(18px);
+  font-style: italic;
+}
+
+
+
+
 .menu {
   width: 100%;
 }
@@ -30,7 +185,7 @@
 }
 
 .menu_item a:hover {
-  background: rgba(251, 251, 244, .2);
+  background: $medblue;
 }
 
 .subMenu_label {
@@ -43,13 +198,13 @@
 }
 
 .subMenu_label:hover {
-  background: rgba(251, 251, 244, .2);
+  background: $hellayellow;
 }
 
 .subMenu_labelArrow {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 4px solid #fafcfe;
+  border-top: 4px solid $bluelight;
   display: inline-block;
   margin-left: 6px;
   transition: 0.6s;
@@ -69,14 +224,14 @@
 
 .subMenu_item a {
   box-sizing: border-box;
-  color: #fafcfe;
+  color:$hellayellow;
   display: block;
   text-decoration: none;
   transition: 0.6s;
 }
 
 .subMenu_item a:hover {
-  background: rgba(251, 251, 244, .2);
+  background:$medblue;
 }
 
 @media all and (max-width: 767px) {
@@ -86,7 +241,7 @@
   }
   .menu_labelInner {
     align-items: center;
-    background: #1d417a;
+    background: $bluelight;
     box-sizing: border-box;
     display: flex;
     height: 50px;
@@ -111,7 +266,7 @@
   .menu_hamburgerIcon,
   .menu_hamburgerIcon::before,
   .menu_hamburgerIcon::after {
-    background-color: #fafcfe;
+    background-color: $bluelight2;
     border-radius: 1px;
     height: 3px;
     transition: 0.4s;
@@ -143,7 +298,7 @@
     transform: rotate(-45deg);
   }
   .menu_list {
-    background: #13294f;
+    background: $darkblue;
     flex-direction: column;
     overflow: hidden;
   }
@@ -153,7 +308,7 @@
     overflow: hidden;
   }
   .menu_switch:checked ~ div .menu_item {
-    border-bottom: 1px solid rgba(251, 251, 244, .2);
+    border-bottom: 1px solid $bluelight2;
   }
   .menu_switch:checked ~ div .menu_item:last-child {
     border-bottom: none;
@@ -172,7 +327,7 @@
     overflow: hidden;
   }
   .subMenu_list {
-    background: #0f213e;
+    background: $darkblue1;
     flex-direction: column;
     overflow: hidden;
   }
@@ -194,13 +349,13 @@
     overflow: visible;
   }
   .subMenu_switch:checked ~ div .subMenu_list {
-    border-top: 1px solid rgba(251, 251, 244, .2);
+    border-top: 1px solid $bluelight2;
   }
   .subMenu_switch:checked ~ div .subMenu_labelArrow {
     transform: rotate(-180deg);
   }
   .subMenu_switch:checked ~ div .subMenu_item {
-    border-bottom: 1px solid rgba(251, 251, 244, .2);
+    border-bottom: 1px solid $bluelight2;
     height: 50px;
     overflow: visible;
   }
@@ -211,13 +366,13 @@
 
 @media all and (min-width: 768px) {
   .menu {
-    background: #1d417a;
+    background: $darkblue;
   }
   .menu_label {
     display: none;
   }
   .menu_list {
-    background: #1d417a;
+    background: $darkblue;
     height: 50px;
     justify-content: space-between;
     max-width: 960px;
@@ -237,14 +392,14 @@
     text-align: center;
   }
   .subMenu_list {
-    background: #13294f;
+    background: $darkblue;
     justify-content: space-between;
     opacity: 0;
     position: absolute;
     top: 100%;
   }
   .subMenu_item a {
-    border-bottom: 1px solid rgba(251, 251, 244, .2);
+    border-bottom: 1px solid      $bluelight2;
     height: 0;
     line-height: 50px;
     overflow: hidden;
@@ -269,12 +424,7 @@
 
 
 .wrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
   font-weight: bold;
   text-align: center;
@@ -286,29 +436,29 @@
 }
 
 .header {
-  background: tomato;
+  background: $turquoiseBrighter;
 }
 
 .footer {
-  background: lightgreen;
+  background: $bluelight;
 }
 
 .main {
   text-align: left;
-  background: deepskyblue;
+  background: $blueFoursquare;
 }
 
 .aside-1 {
-  background: gold;
+  background: $blueVimeo;
 }
 
 .aside-2 {
-  background: hotpink;
+  background: $blueBabe;
 }
 
 @media all and (min-width: 600px) {
   .aside {
-    flex: 1 auto;
+    flex: 1 ;
   }
 }
 
