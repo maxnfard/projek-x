@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300);
+﻿@import url(http://fonts.googleapis.com/css?family=Raleway:400,300);
 
 //Color definitions
 $lightblue: #D7F7FE;
@@ -234,7 +234,7 @@ h3 {
   background:$medblue;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 767px) {
   .menu_label {
     cursor: pointer;
     display: block;
@@ -364,7 +364,7 @@ h3 {
   }
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 768px) {
   .menu {
     background: $darkblue;
   }

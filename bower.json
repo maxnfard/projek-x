@@ -1,7 +1,0 @@
-{
-  "name": "gulp_test",
-  "dependencies": {
-    "susy": "~2.2.6",
-    "breakpoint-sass": "~2.6.1"
-  }
-}
