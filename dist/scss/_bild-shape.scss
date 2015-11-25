@@ -1,13 +1,19 @@
-//för bilder shape och hur ser ut i sidan
+//för bilder shape och hur ser ut de bilderna i sidan
 @import 'color-variabel';
-.wrapit{
-  width: 100%;
-  overflow: hidden;
-  margin: 0 ;}
-img {
+//****************************//
+@mixin img-format($margin-kanter){
   border-radius: 50%;
   box-shadow: 0 0 0 10px $medblue;
-  margin-top: 10px;
-  margin-left: 10px;
-  display: inline;
+  margin-top: $margin-kanter;
+  margin-left: $margin-kanter;
+	display: inline;
 }
+//******************************//
+@mixin wrapit-over(){
+  width: 100%;
+  overflow: hidden;
+  margin: 0 ;	
+	}
+//*******************************//
+.wrapit{@include wrapit-over() ;}
+.img{@include img-format(10px);}

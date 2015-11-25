@@ -1,6 +1,11 @@
 //menu
 @import 'color-variabel';
-
+.item-a{
+  color: $bluelight2;
+  display: block;
+  padding: 0 20px;
+  transition: 0.6s;	
+}
 .menu {
   width: 100%;
 }
@@ -23,12 +28,9 @@
 }
 
 .menu_item a {
-  box-sizing: border-box;
-  color: $bluelight2;
-  display: block;
-  padding: 0 20px;
-  text-decoration: none;
-  transition: 0.6s;
+text-decoration: none;
+box-sizing: border-box;
+@extend .item-a;
 }
 
 .menu_item a:hover {
@@ -36,12 +38,9 @@
 }
 
 .subMenu_label {
-  color: $bluelight2;
   cursor: pointer;
-  display: block;
   font-size: 12px;
-  padding: 0 20px;
-  transition: 0.6s;
+ @extend .item-a;
 }
 
 .subMenu_label:hover {

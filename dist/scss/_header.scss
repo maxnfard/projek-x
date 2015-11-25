@@ -1,6 +1,7 @@
 //header
 @import'color-variabel';
-.header {
+//**************************
+@mixin header-1(){
   background: $hellayellow;
   color: white;
   padding: em(10px);
@@ -9,7 +10,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;	
+}
+.header {
+ @include header-1();
   }
   .site-title, .site-tagline {
     font-weight: 400;
@@ -20,7 +24,7 @@
       text-align: center;
     }
     .site-title {
-      margin: 0;
+      margin: 10;
     }
   }
 }

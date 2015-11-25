@@ -1,9 +1,32 @@
 //alla fonter och formateringar för sidan
 @import 'color-variabel';
-h1{
+//********************************
+@mixin h1-format(){
   color:$neutralblack;
   font-weight:300;
-	
+
+}
+//********************************
+@mixin header-format(){
+ background: $hellayellow;
+  color: white;
+  padding: em(10px);
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+//******************************
+@mixin body-format(){
+  background: $lightblue;
+  font-family: $base-font-family;
+  color: $neutralblack;
+}
+//*******************************
+h1{
+@include h1-format();	
 }
 
 a{
@@ -20,9 +43,7 @@ li{
   display:inline;
 }
 body {
-  background: $lightblue;
-  font-family: $base-font-family;
-  color: $neutralblack;
+@include body-format();
 }
 
 * {
@@ -37,15 +58,7 @@ body {
   margin: 0 auto;
 }
 .header {
-  background: $hellayellow;
-  color: white;
-  padding: em(10px);
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+ @include header-format();
   }
   .site-title, .site-tagline {
     font-weight: 400;
