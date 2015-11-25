@@ -1,0 +1,190 @@
+//desktop sidan
+@import 'color-variabel';
+
+@media all and (max-width: 600px) {
+  .menu_label {
+    cursor: pointer;
+    display: block;
+  }
+  .menu_labelInner {
+    align-items: center;
+    background: $bluelight;
+    box-sizing: border-box;
+    display: flex;
+    height: 50px;
+    padding: 5px 20px;
+  }
+  .menu_labelInner h1 {
+    color: #fafcfe;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 42px;
+    margin: 0;
+  }
+  .menu_switch:checked + div {
+    font-size: inherit;
+  }
+  .menu_hamburgerIcon {
+    display: block;
+    margin-right: 20px;
+    position: relative;
+    text-align: center;
+  }
+  .menu_hamburgerIcon,
+  .menu_hamburgerIcon::before,
+  .menu_hamburgerIcon::after {
+    background-color: $bluelight2;
+    border-radius: 1px;
+    height: 3px;
+    transition: 0.4s;
+    width: 30px;
+  }
+  .menu_hamburgerIcon::before,
+  .menu_hamburgerIcon::after {
+    content: "";
+    left: 0;
+    position: absolute;
+  }
+  .menu_hamburgerIcon::before {
+    top: -10px;
+  }
+  .menu_hamburgerIcon::after {
+    top: 10px;
+  }
+  .menu_switch:checked ~ div .menu_hamburgerIcon {
+    background-color: transparent;
+  }
+  .menu_switch:checked ~ div .menu_hamburgerIcon::before,
+  .menu_switch:checked ~ div .menu_hamburgerIcon::after {
+    top: 0;
+  }
+  .menu_switch:checked ~ div .menu_hamburgerIcon::before {
+    transform: rotate(45deg);
+  }
+  .menu_switch:checked ~ div .menu_hamburgerIcon::after {
+    transform: rotate(-45deg);
+  }
+  .menu_list {
+    background: $darkblue;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .menu_item a {
+    height: 0;
+    line-height: 50px;
+    overflow: hidden;
+  }
+  .menu_switch:checked ~ div .menu_item {
+    border-bottom: 1px solid $bluelight2;
+  }
+  .menu_switch:checked ~ div .menu_item:last-child {
+    border-bottom: none;
+  }
+  .menu_switch:checked ~ div .menu_item a {
+    height: 50px;
+    overflow: visible;
+  }
+  .subMenu {
+    line-height: 50px;
+    transition: 0.6s;
+  }
+  .subMenu_label {
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  .subMenu_list {
+    background: $darkblue1;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .subMenu_item {
+    height: 0;
+    overflow: hidden;
+    transition: 0.6s;
+  }
+  .subMenu_item a {
+    line-height: 50px;
+    padding: 0 30px;
+  }
+  .menu_switch:not(:checked) ~ div .subMenu {
+    height: 0;
+    overflow: hidden;
+  }
+  .menu_switch:checked ~ div .subMenu_label {
+    height: 50px;
+    overflow: visible;
+  }
+  .subMenu_switch:checked ~ div .subMenu_list {
+    border-top: 1px solid $bluelight2;
+  }
+  .subMenu_switch:checked ~ div .subMenu_labelArrow {
+    transform: rotate(-180deg);
+  }
+  .subMenu_switch:checked ~ div .subMenu_item {
+    border-bottom: 1px solid $bluelight2;
+    height: 50px;
+    overflow: visible;
+  }
+  .subMenu_switch:checked ~ div .subMenu_item:last-child {
+    border-bottom: none;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .menu {
+    background: $darkblue;
+  }
+  .menu_label {
+    display: none;
+  }
+  .menu_list {
+    background: $darkblue;
+    height: 50px;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .menu_item {
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    width: 20%;
+  }
+  .menu_item a {
+    height: 50px;
+  }
+  .subMenu_label {
+    line-height: 50px;
+    text-align: center;
+  }
+  .subMenu_list {
+    background: $darkblue;
+    justify-content: space-between;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+  }
+  .subMenu_item a {
+    border-bottom: 1px solid      $bluelight2;
+    height: 0;
+    line-height: 50px;
+    overflow: hidden;
+    padding: 0 16px;
+    text-align: left;
+    width: 200px;
+  }
+  .subMenu_item:last-child a {
+    border-bottom: none;
+  }
+  .menu_item:hover .subMenu_labelArrow {
+    transform: rotate(-180deg);
+  }
+  .menu_item:hover .subMenu_list {
+    opacity: 1;
+  }
+  .menu_item:hover .subMenu_item a {
+    height: 50px;
+    overflow: visible;
+  }
+}

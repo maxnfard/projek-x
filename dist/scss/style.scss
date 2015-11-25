@@ -1,0 +1,21 @@
+//import fonter 
+@import url('http://fonts.googleapis.com/css?family=Raleway:400,300');
+//import färger och variablar för sidan
+@import "color-variabel";
+//detta för  att ha bilderna rund isl att frykant
+@import "bild-shape";
+// bara visa social media på footer av sidan
+@import 'socialmedia';
+//formatera mest på fonter h1,h2,h3 och body och container att hur ser ut
+@import 'formatsidan';
+//för header att ser företags namn och en kort beskrivning
+@import 'header';
+//menu på sidan
+@import 'menu';
+//det är för hur sidan ser ut på desktop
+@import 'desktop';
+//det är för hur olikaq delar av sidan ser ut och placering de
+@import 'kropp-format';
+
+
+
