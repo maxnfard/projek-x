@@ -1,0 +1,51 @@
+// för  social media
+@import 'color-variabel';
+.btn{
+  position:relative;
+  display:inline-block;
+  padding:5px;
+  border-radius:4px;
+  width:32px;
+  height:32px;
+  text-indent:-250px;
+  overflow:hidden;
+  transition: background-color 1s; 
+}
+
+.btn:hover{
+}
+
+.tw{background:url(http://heyvian.com/misc/32/Twitter.png) no-repeat top left;
+}
+
+.fb{background:url(http://heyvian.com/misc/32/Facebook.png) no-repeat top left;
+}
+
+.gp{background:url(http://heyvian.com/misc/32/Google%20+.png) no-repeat top left;
+}
+
+.pin{background:url(http://heyvian.com/misc/32/Pinterest.png) no-repeat top left;
+}
+
+.credit{
+  width:100%;
+  font-size:32px;
+  font-weight:700;
+  text-transform:uppercase;
+  text-align:center;
+  vertical-align:bottom;
+  line-height:12px;
+  margin:40px 0 0 0;
+  color:$darkgray;
+}
+
+.credit a{
+  font-size:12px;
+  font-weight:400;
+  color:$moredarkgray;
+  padding:0 4px;
+}
+
+.credit a:hover{
+  border-bottom:2px solid $neutralgray;
+}
