@@ -1,0 +1,42 @@
+//header
+@import'color-variabel';
+.header {
+  background: $hellayellow;
+  color: white;
+  padding: em(10px);
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .site-title, .site-tagline {
+    font-weight: 400;
+  }
+  @media (max-width: 700px) {
+    .site-title, .site-tagline {
+      width: 100%;
+      text-align: center;
+    }
+    .site-title {
+      margin: 0;
+    }
+  }
+}
+.site-title, h1, h2, h3 {
+  font-family: $heading-font-family;
+  font-size: em(50px);
+  color: darken($lightblue, 75%);
+}
+h3 {
+  font-size: 32px;
+  color: desaturate($hellayellow, 10%);
+}
+.site-title {
+  color: white;
+}
+.site-tagline {
+  font-size: em(18px);
+  font-style: italic;
+}
