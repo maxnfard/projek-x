@@ -1,0 +1,82 @@
+//menu
+@import 'color-variabel';
+
+.menu {
+  width: 100%;
+}
+
+.menu_switch,
+.subMenu_switch {
+  display: none;
+}
+
+.menu_list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: 0.6s;
+}
+
+.menu_item {
+  font-size: 12px;
+  list-style: none;
+}
+
+.menu_item a {
+  box-sizing: border-box;
+  color: $bluelight2;
+  display: block;
+  padding: 0 20px;
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+.menu_item a:hover {
+  background: $medblue;
+}
+
+.subMenu_label {
+  color: $bluelight2;
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  padding: 0 20px;
+  transition: 0.6s;
+}
+
+.subMenu_label:hover {
+  background: $hellayellow;
+}
+
+.subMenu_labelArrow {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid $bluelight;
+  display: inline-block;
+  margin-left: 6px;
+  transition: 0.6s;
+  vertical-align: middle;
+}
+
+.subMenu_list {
+  margin: 0;
+  padding: 0;
+  transition: 0.6s;
+}
+
+.subMenu_item {
+  font-size: 12px;
+  list-style: none;
+}
+
+.subMenu_item a {
+  box-sizing: border-box;
+  color:$hellayellow;
+  display: block;
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+.subMenu_item a:hover {
+  background:$medblue;
+}
